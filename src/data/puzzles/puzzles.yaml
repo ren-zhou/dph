@@ -1,3 +1,9 @@
+- name: Demo Puzzle
+  key: demo
+  enc_answer: "$2a$10$wJZcD.NTBEjH6Aen3mSv4OAJah0NLs7w6VXszsyHestxlPl3iuqMy"
+  obfuscation: Oh no... You shouldn't be seeing this text.
+  unlock_req: -1
+  index: 0
 - name: Flags
   key: flags
   enc_answer: "$2a$10$Re8O5/5jggcls5vzcqooMu3F9L2ZKIHVPr8o5Jaap/oawgeeV6Rga"

@@ -4,6 +4,8 @@ import PageContainer from '../components/page_container';
 import { dsuffix } from '../utils/dhrub_gen';
 
 export default function About() {
+    const bcrypt = require('bcryptjs');
+    console.log(bcrypt.hashSync("cutestdhrub", bcrypt.genSaltSync(10)));
     return (
         <PageContainer>
             <p>

@@ -1,14 +1,13 @@
 import React from 'react';
+import { puzzle_get_answer } from '../utils/puzzle_store';
 
-export default function PuzzleCard({ name, enc_answer, puzzle_key }) {
-  const bcrypt = require('bcryptjs');
-  const answer = localStorage.getItem(`puzzle_ans_${name}`) || '';
-  const solved = bcrypt.compareSync(answer, enc_answer);
-
+export default function PuzzleCard({ name, puzzle_key }) {
+  const answer = puzzle_get_answer(puzzle_key);
+  
   return (
     <div className="puzzle-card">
       <div id={puzzle_key}>{name}</div>
-      {solved ? (
+      {answer != '' ? (
         <div className="solution">
           Solution:
           {' '}

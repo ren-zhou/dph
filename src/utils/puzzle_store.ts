@@ -2,10 +2,10 @@ import puzzles from '../data/puzzles/puzzles.yaml';
 import type { Puzzle } from '../components/types/puzzle';
 
 const bcrypt = require('bcryptjs');
+const store = require('store');
 
 export function puzzle_num_solved(): number {
-  // console.log(puzzles.forEach((puzzle) => {puzzle_get_answeer_puzzle.key}))
-  return puzzles.filter((puzzle) => puzzle_get_answer(puzzle.key) != '').length;
+  return puzzles.filter((puzzle) => puzzle_get_answer(puzzle.key) != '').length - 1;
 }
 
 export function puzzle_get(puzzle_key: string): Puzzle | null {
@@ -19,7 +19,7 @@ export function puzzle_get(puzzle_key: string): Puzzle | null {
 export function puzzle_get_answer(puzzle_key: string): string {
   const puzzle = puzzle_get(puzzle_key);
   if (puzzle == null) return '';
-  const answer = localStorage.getItem(`puzzle_ans_${puzzle_key}`) || '';
+  const answer = store.get(`puzzle_ans_${puzzle_key}`) || '';
   return bcrypt.compareSync(answer, puzzle.enc_answer) ? answer : '';
 }
 
@@ -35,7 +35,7 @@ export function puzzle_submit_answer(puzzle_key: string, answer: string): number
     return -1;
   }
   if (bcrypt.compareSync(answer, puzzle.enc_answer)) {
-    localStorage.setItem(`puzzle_ans_${puzzle_key}`, answer);
+    store.set(`puzzle_ans_${puzzle_key}`, answer);
     return 1;
   }
   return 0;
