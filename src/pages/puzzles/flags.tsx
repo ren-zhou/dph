@@ -6,7 +6,7 @@ export default function FlagsPage() {
     <PuzzleContainer puzzle_key="flags" title="Flags">
       <div className="flags-images">
         <div>
-          <img src="/flags/00.jpg" />
+          <img src="/flags/00.JPG" />
           <img src="/flags/01.jpg" />
         </div>
         <div>
