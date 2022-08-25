@@ -1,0 +1,48 @@
+- name: Flags
+  key: flags
+  enc_answer: "$2a$10$Re8O5/5jggcls5vzcqooMu3F9L2ZKIHVPr8o5Jaap/oawgeeV6Rga"
+  obfuscation: "░/>██<█<"
+  unlock_req: 0
+  index: 1
+- name: Puzzle for the Blind
+  key: puzzle-for-the-blind
+  enc_answer: "$2a$10$RiJPzksp.A3S.LmD.oPgbe3TC1FPp.7JexRxTzBB2gg7XTzkk4qem"
+  obfuscation: "░▓▓ ▓>▒< ▓░/░    █/>  █▓░░  █ ░░▓▒ ░/>"
+  unlock_req: 1
+  index: 2
+- name: Cryptic Answering Test
+  key: cryptic-answering-test
+  enc_answer: "$2a$10$RMsFg0Gubopuv9OSlmOznuFAiWrVTFiirUoWrTArrmLc6YyKtH3M."
+  obfuscation: "░▓/▒<▒░▓▒▒▒▓  ██▓▓░▓░░▒>▓░░/█▒  █░░▓░>>░"
+  unlock_req: 1
+  index: 3
+- name: Pure Fantasy
+  key: pure-fantasy
+  enc_answer: "$2a$10$EdTQbTmkn0tJa5Stn5II2eXuD9KIjOTTAGeGCdv7RhYJrp/hmbwt6"
+  obfuscation: "▒/▒▒█ ░▒  ░▒ ▓><░▒▒▓▒▓░░█"
+  unlock_req: 2
+  index: 4
+- name: Cookin' with Roy
+  key: cookin-with-roy
+  enc_answer: "$2a$10$hoqPWBv01SOi4pVCctXI7.wlaWubusw7uX0fBSGplscJ39wZrjYWe"
+  obfuscation: "▒▒▓▓▓▒▓░/░>▓▒  ░▓>░█  ░/▒░▓ ▓<"
+  unlock_req: 3
+  index: 5
+- name: Riches
+  key: riches
+  enc_answer: "$2a$10$Aw24VgTlyoxb37TBUmxSKOq9s377ywS5foqa/JDY3DmZ.2P5b07AC"
+  obfuscation: "▒░▓>▒>█░█>"
+  unlock_req: 4
+  index: 6
+- name: Hole in my Heart
+  key: hole-in-my-heart
+  enc_answer: "$2a$10$6aaeM3Q9.OCN2mH03m7JWeB321qw7EBBpUiJTv6rTLQUr4aVPw6z."
+  obfuscation: "░▒▒▒░>▒█  ░░█  █▒▓▓  ███▒<▒█░▒>"
+  unlock_req: 5
+  index: 7
+- name: Search
+  key: search
+  enc_answer: "$2a$10$dfWV2bj8q9DqGunJRdo0yeXRceCadcmgELN0u6bBhftTDmzRf6EDO"
+  obfuscation: "▓▓ <▓▒ ▓▓▓/▓ █"
+  unlock_req: 7
+  index: 8

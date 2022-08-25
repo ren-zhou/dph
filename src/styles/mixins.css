@@ -1,0 +1,30 @@
+:root{
+	--r-orange: #ffd260;
+	--selected:#c9ebff;
+	--focus-select: #ffde8c;
+	--correct-guess-color: #295bff;
+	--text-color: black;
+	--drublue: #008cff;
+	--drubluedark: #014278;
+}
+
+.margin-small {
+    margin-top: 3px;
+}
+
+.margin-medium {
+    margin-top: 6px;
+}
+
+.margin-large {
+    margin-top: 9px
+}
+
+.left-align {
+	text-align: left;
+}
+
+.orange {
+    background-color: var(--r-orange);
+}
+

@@ -1,0 +1,65 @@
+#puzzle-list {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 40%;
+    height: 100%;
+    overflow-y: scroll;
+	scrollbar-width: 0;
+}
+
+#puzzle-list::-webkit-scrollbar {
+	display: none;
+}
+
+#puzzle-list .puzzle-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: medium solid black;
+    border-radius: 0.5em;
+    margin: 0.65em 1em;
+    padding: 0.8em 0.2em;
+    max-width: min(40em, 95%);
+    height: fit-content;
+}
+
+#puzzle-list .puzzle-item.unlocked {
+    cursor: pointer;
+}
+
+#puzzle-list .puzzle-item.unlocked:hover {
+    background-color: var(--selected);
+}
+
+#puzzle-list .puzzle-item.locked {
+    opacity: 0.3;
+    background-color: rgb(238, 238, 238);
+}
+
+#puzzle-list .puzzle-item .index {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 auto;
+    padding-left: 1em;
+    padding-right: 0.2em;
+    border-right: thin solid black;
+}
+
+#puzzle-list .puzzle-item .puzzle-card {
+    display: flex;
+    flex: 1 1 auto ;
+    flex-direction: column;
+    padding-left: 0.5em;
+    padding-right: 1em;
+    margin-right: 0.3em;
+}
+
+#puzzle-list .puzzle-item .title {
+    font-size: 1.3em;
+}
+
+#puzzle-list .puzzle-item .solution {
+    color: var(--drublue);
+}
+
+
