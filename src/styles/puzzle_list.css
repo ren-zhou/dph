@@ -48,10 +48,11 @@
 #puzzle-list .puzzle-item .puzzle-card {
     display: flex;
     flex: 1 1 auto ;
-    flex-direction: column;
+    flex-direction: row;
     padding-left: 0.5em;
     padding-right: 1em;
     margin-right: 0.3em;
+    justify-content: space-between;
 }
 
 #puzzle-list .puzzle-item .title {
@@ -59,7 +60,8 @@
 }
 
 #puzzle-list .puzzle-item .solution {
+    /* align-self: flex-end;
+    margin-right: 0; */
     color: var(--drublue);
 }
-
 

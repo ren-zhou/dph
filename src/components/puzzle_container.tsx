@@ -9,14 +9,18 @@ import PuzzleTitle from './puzzle_title';
 export default function PuzzleContainer({ puzzle_key, title, children }) {
   const answer = puzzle_get_answer(puzzle_key);
   return (
-    <PageContainer>
+    <PageContainer title={title}>
       <div className="puzzle-page">
         <PuzzleTitle title={title} />
-        {children}
+        <div className="puzzle-content">
+          {children}
+        </div>
         <div className="sticky-bottom">
+          <div className='answer-box'>
           {answer != ''
             ? <SolvedBox answer={answer} />
             : <GuessBox puzzle_key={puzzle_key} />}
+          </div>
         </div>
       </div>
     </PageContainer>

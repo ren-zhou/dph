@@ -12,7 +12,7 @@ export default function PuzzleItem({ puzzle, num_solved }) {
       ? (
         <Link to={`${key}`} className="puzzle-item unlocked">
           <div className="index">{index}</div>
-          <PuzzleCard {...puzzle} />
+          <PuzzleCard name={puzzle.name} puzzle_key={puzzle.key} />
         </Link>
       )
       : (

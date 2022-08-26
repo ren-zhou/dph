@@ -25,18 +25,27 @@ export function puzzle_get_answer(puzzle_key: string): string {
 
 // 0: incorrect answer
 // 1: correct answer
+// 2: correct partial
 // -1: correct answer already set
 // -2: puzzle not found
 export function puzzle_submit_answer(puzzle_key: string, answer: string): number {
+  answer = answer.toLowerCase().replace(/[^a-z]+/g, '');
   const puzzle = puzzle_get(puzzle_key);
   if (puzzle == null) return -2;
 
   if (puzzle_get_answer(puzzle_key) != '') {
     return -1;
   }
+
   if (bcrypt.compareSync(answer, puzzle.enc_answer)) {
     store.set(`puzzle_ans_${puzzle_key}`, answer);
     return 1;
   }
+
+  if (verify_partials(puzzle, answer)) return 2;
   return 0;
+}
+
+function verify_partials(puzzle: Puzzle, answer: string): boolean {
+  return puzzle.partials.some((partial) => bcrypt.compareSync(answer, partial))
 }

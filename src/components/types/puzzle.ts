@@ -7,6 +7,7 @@ interface Puzzle {
     enc_answer: string;
     obfuscated_answer: string;
     unlock_req: number;
+    partials: Array<string>;
   }
 
 export type { Puzzle };

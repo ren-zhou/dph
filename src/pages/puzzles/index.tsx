@@ -6,7 +6,7 @@ import '../../styles/mixins.css';
 
 export default function Home() {
   return (
-    <PageContainer>
+    <PageContainer title="Puzzles">
         <PuzzleList />
     </PageContainer>
   );
