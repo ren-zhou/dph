@@ -6,6 +6,10 @@ export default function FlagsPage() {
     <PuzzleContainer puzzle_key="flags" title="Flags">
       <div className="flags-images">
         <div>
+          <img src="/flags/14.jfif" />
+          <img src="/flags/15.webp" />
+        </div>
+        <div>
           <img src="/flags/00.JPG" />
           <img src="/flags/01.jpg" />
         </div>
@@ -13,6 +17,10 @@ export default function FlagsPage() {
           <img src="/flags/02.jfif" />
           <img src="/flags/03.jpg" />
           <img src="/flags/04.png" />
+        </div>
+        <div>
+          <img src="/flags/16.webp" />      
+          <img src="/flags/17.jpg" />
         </div>
         <div>
           <img src="/flags/05.jpg" />

@@ -14,7 +14,7 @@ export default function PageContainer({ title, children }) {
         <p>
           Made by
           {' '}
-          <a target="https://github.com/ren-zhou/">ren-zhou</a>
+          <a target="_blank" href="https://github.com/ren-zhou/">ren-zhou</a>
         </p>
       </footer>
     </div>
