@@ -5,6 +5,9 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
+import { blue } from '@mui/material/colors';
+import { Box } from '@mui/system';
+import { Link, navigate } from 'gatsby';
 
 type GuessModalVariant = "partial" | "correct" | "incorrect";
 
@@ -28,7 +31,7 @@ function PartialContent({ guess, handleClose }) {
         </DialogContentText>
       </DialogContent>
       <DialogActions>
-        <Button onClick={handleClose}>Close</Button>
+        <Button onClick={handleClose} sx={{'color': 'black'}}>Close</Button>
       </DialogActions>
     </div>
   )
@@ -46,7 +49,7 @@ function CorrectContent({ guess, handleClose }) {
         </DialogContentText>
       </DialogContent>
       <DialogActions>
-        <Button onClick={handleClose}>← Go back to puzzles page</Button>
+        <Link to={'/puzzles/'}>← Go back to puzzles page</Link>
       </DialogActions>
     </div>
   )
@@ -60,11 +63,11 @@ function IncorrectContent({ guess, handleClose }) {
       </DialogTitle>
       <DialogContent>
         <DialogContentText>
-          That's not right, but keep at it! I believe in you.
+          You guessed <span className="incorrect">{guess}</span>. That's not right, but keep at it! I believe in you.
         </DialogContentText>
       </DialogContent>
       <DialogActions>
-        <Button onClick={handleClose}>Close</Button>
+        <Button onClick={handleClose} sx={{'color': 'black'}}>Close</Button>
       </DialogActions>
     </div>
   )
@@ -78,12 +81,16 @@ export default function GuessModal({ open, handleClose, guess, variant}: GuessMo
       case "partial":
         return <PartialContent guess={guess} handleClose={handleClose} />;
       case "incorrect":
-        return <IncorrectContent guess={guess} handleClose={handleClose} />;
+        return <IncorrectContent guess={guess} handleClose={()=> {
+          handleClose();
+        }} />;
     }
   }
+
   return (
     <div>
       <Dialog
+        PaperProps={{style: {'border': 'black solid 3px', 'borderRadius': 0}}}
         open={open}
         onClose={handleClose}
       >

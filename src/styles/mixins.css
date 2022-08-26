@@ -2,10 +2,10 @@
 	--r-orange: #ffd260;
 	--selected:#c9ebff;
 	--focus-select: #ffde8c;
-	--correct-guess-color: #295bff;
 	--text-color: black;
 	--drublue: #008cff;
 	--drubluedark: #014278;
+	--correct-guess-color: var(--drublue);
 }
 
 .margin-small {

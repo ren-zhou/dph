@@ -58,3 +58,8 @@
     text-transform: uppercase;
     color: var(--r-orange);
 }
+
+.incorrect {
+    color: red;
+    text-transform: uppercase;
+}
