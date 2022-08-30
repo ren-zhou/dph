@@ -5,7 +5,7 @@ export default function CrypticAnsweringTestPage() {
   return (
     <PuzzleContainer puzzle_key="cryptic-answering-test" title="Cryptic Answering Test">
 
-        <p> Sloppy meal with <b>uknown</b> side (5) </p>
+        <p> Sloppy meal with <b>unknown</b> side (5) </p>
         <p> Unsuccessful thing about <b>retired writer?</b> (5) </p>
         <p> <b>Goat tussled</b> with real beast (5) </p>
         <p> <b>Old site</b> found in Peru instead (5) </p>
