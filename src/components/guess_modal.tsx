@@ -26,7 +26,7 @@ function PartialContent({ guess, handleClose }) {
       </DialogTitle>
       <DialogContent>
         <DialogContentText>
-          You guessed <span className="guess">{guess}</span>. That's isn't the
+          You guessed <span className="guess">{guess}</span>. That isn't the
           answer, but it's relevant to the puzzle solution.
         </DialogContentText>
       </DialogContent>
